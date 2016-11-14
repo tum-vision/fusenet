@@ -10,10 +10,6 @@ endif()
 # ---[ Caffe project
 project(Caffe C CXX)
 
-# #set (OPENCV_ROOT "/work/lingni/libraries/opencv/install/")
-# set (OPENCV_ROOT "/usr/wiss/lingni/Libraries/opencv/install/")
-
-
 set (CMAKE_BUILD_TYPE Release CACHE STRING "default build type Release" FORCE)
 
 
@@ -76,7 +72,6 @@ include_directories(BEFORE src) # This is needed for gtest.
 set (CUDA_NVCC_FLAGS "${CUDA_NVCC_FLAGS} -D_FORCE_INLINES")
 set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -D_FORCE_INLINES")
 set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fPIC -Wall")
-# set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
 
 # ---[ Subdirectories
