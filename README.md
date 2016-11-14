@@ -6,7 +6,7 @@ FuseNet is developed as a general architecture for deep convolutional neural net
 The code is compatible with an early Caffe version of June 2016. It is developed under Ubuntu 16.04 with CUDA 7.5 and cuDNN v5.0. If you use the program under other Ubuntu distributions, you may need to comment out line 72--73 in the root CMakeLists.txt file. If you compile under other OS, please use Google as your friend. We mostly test the program on Nvidia Titan X GPU.
 
 ### Training and Testing
-We provide all needed python scripts and prototxt file to reproduce our published results under `<./fusenet/>`. A short guideline is given below. For detailed information, check [here](./fusenet/segmentation/readme.md).
+We provide all needed python scripts and prototxt file to reproduce our published results under `<./fusenet/>`. A short guideline is given below. For detailed information, check [here](fusenet/segmentation/readme.md).
 
 #### Initiazation
 Our network architecture is based on VGGNet-16layer. However, since we have extra input channel for depth, we provide the compute the
