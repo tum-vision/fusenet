@@ -52,9 +52,9 @@ To test the semantic segmentation performance, we provide the python scripts to 
 check   ./fusenet/scripts/test_segmentation.py
 ```
 
-## <b, name="release">Released Caffemodel</b>
+## <b name="release">Released Caffemodel</b>
 ### Semantic Image Segmentation
-The items marked with the :ballot_box_with_check: are already available for downloading, otherwise they will be released soon. Unless otherwise stated, all models are finetuned from pretrained VGGNet-16Layer model. Stay tuned :fire:
+The items marked with ticks are already available for downloading, otherwise they will be released soon. Unless otherwise stated, all models are finetuned from pretrained VGGNet-16Layer model. Stay tuned :fire:
 
 #### NYU v2 40 class semantic segmentation
 * FuseNet-SF1:
@@ -80,7 +80,7 @@ The items marked with the :ballot_box_with_check: are already available for down
 ### Scene Classification
 To be released.
 
-## <c, name="paper">Publication</c>
+## <c name="paper">Publication</c>
 If you use this code or our trainined model in your work, please consider cite the following paper.
 
 Caner Hazirbas, Lingni Ma, Csaba Domokos and Daniel Cremers, _"FuseNet: Incorporating Depth into Semantic Segmentation via Fusion-based CNN Architecture"_, in proceedings of the 13th Asian Conference on Computer Vision, 2016. ([pdf](https://vision.in.tum.de/_media/spezial/bib/hazirbasma2016fusenet.pdf))
@@ -93,7 +93,7 @@ Caner Hazirbas, Lingni Ma, Csaba Domokos and Daniel Cremers, _"FuseNet: Incorpor
      month     = "November",
     }
 
-##<d, name="others"> License and Contact</d>
+##<d name="others"> License and Contact</d>
 [BVLC/caffe](https://github.com/BVLC/caffe) is released under the [BSD 2-Clause license](https://github.com/BVLC/caffe/blob/master/LICENSE). The modification to the original code is released under [GNU General Public License Version 3 (GPLv3)](http://www.gnu.org/licenses/gpl.html).
 
 Contact **Lingni Ma** [:envelope:](mailto:lingni@in.tum.de) for questions, comments and reporting bugs.
