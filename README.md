@@ -1,12 +1,24 @@
 # FuseNet
 FuseNet is developed as a general architecture for deep convolutional neural network (CNN) to train dataset with RGB-D images. It can be used for semantic segmentation, scene classification and other applications. This repository is an official release of the original work ([see paper](#paper)), and it is implemented based on the [BVLC/caffe](https://github.com/BVLC/caffe) framework.
 
-## Usage
+* [Using FuseNet](#usage)
+* [Released Caffemodel](#release)
+* [Publication](#paper)
+* [License and Contact](#other)
+
+## <a, name="usage">Usage</a>
 ### Installation
-The code is compatible with an early Caffe version of June 2016. It is developed under Ubuntu 16.04 with CUDA 7.5 and cuDNN v5.0. If you use the program under other Ubuntu distributions, you may need to comment out line 72--73 in the root CMakeLists.txt file. If you compile under other OS, please use Google as your friend. We mostly test the program on Nvidia Titan X GPU.
+The code is compatible with an early Caffe version of June 2016. It is developed under Ubuntu 16.04 with CUDA 7.5 and cuDNN v5.0. If you use the program under other Ubuntu distributions, you may need to comment out line 72--73 in the root CMakeLists.txt file. If you compile under other OS, please use Google as your friend. We mostly test the program with Nvidia Titan X GPU. Please note multi-GPU training is supported.
+```
+git clone https://github.com/tum-vision/fusenet.git
+mkdir build && cd build
+cmake ..
+make -j10
+make runtest -j10
+```
 
 ### Training and Testing
-We provide all needed python scripts and prototxt file to reproduce our published results under `<./fusenet/>`. A short guideline is given below. For detailed information, check [here](fusenet/readme.md).
+We provide all needed python scripts and prototxt files to reproduce our published results under `./fusenet/`. A short guideline is given below. For further detailed instructions, check [here](fusenet/readme.md).
 
 #### Initiazation
 Our network architecture is based on VGGNet-16layer. However, since we have extra input channel for depth, we provide the compute the
@@ -40,13 +52,30 @@ To test the semantic segmentation performance, we provide the python scripts to 
 check   ./fusenet/scripts/test_segmentation.py
 ```
 
-
-
-## Released Caffemodel
+## <a, name="release">Released Caffemodel</a>
 ### Semantic Image Segmentation
-#### NYU v2
+The items marked with the :ballot_box_with_check: are already available for downloading, otherwise they will be released soon. Unless otherwise stated, all models are finetuned from pretrained VGGNet-16Layer model. Stay tuned :fire:
 
-#### SUN-RGBD
+#### NYU v2 40 class semantic segmentation
+* FuseNet-SF1:
+
+     This model is trained with the FuseNet Sparse-Fusion1 architecture on 320x240 resolution. To obtain 640x480 full resolution, you can use bilinear upsample the segmenation or better with CRF refinement.
+ - [x] [deploy.prototxt](fusenet/segmentation/nyu40-sf1/deploy.prototxt)
+ - [ ] caffemodel
+
+* FuseNet-SF5:
+
+    This model is trained the FuseNet SparseFusion5 architecture on 320x240 resolution. It gives 66.0% global pixelwise accuracy, 43.4% average classwise accuracy and 32.7% average classwise IoU.
+ - [x] [deploy.prototxt](fusenet/segmentation/nyu40-sf5/deploy.prototxt)
+ - [ ] caffemodel
+
+#### SUN-RGBD 37-class semantic segmentation
+* FuseNet-SF5:
+
+    This model is trained with 224x224 resolution. It gives 76.3% global pixelwise accuracy, 48.30% average classwise accuracy and 37.3% average classwise IoU,
+ - [x] [deploy.prototxt](fusenet/segmentation/sunrgbd-sf5/deploy.prototxt)
+ - [ ] caffemodel
+
 
 ### Scene Classification
 To be released.
@@ -64,7 +93,7 @@ Caner Hazirbas, Lingni Ma, Csaba Domokos and Daniel Cremers, _"FuseNet: Incorpor
      month     = "November",
     }
 
-## License and Contact
+##<a, name="others"> License and Contact</a>
 [BVLC/caffe](https://github.com/BVLC/caffe) is released under the [BSD 2-Clause license](https://github.com/BVLC/caffe/blob/master/LICENSE). The modification to the original code is released under [GNU General Public License Version 3 (GPLv3)](http://www.gnu.org/licenses/gpl.html).
 
-Contact **Lingni Ma** [:envelope:](lingni@in.tum.de) for questions, comments and reporting bugs.
+Contact **Lingni Ma** [:envelope:](mailto:lingni@in.tum.de) for questions, comments and reporting bugs.
