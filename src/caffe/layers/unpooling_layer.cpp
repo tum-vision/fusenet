@@ -28,8 +28,8 @@ void UnpoolingLayer<Dtype>::LayerSetUp(const vector<Blob<Dtype>*>& bottom,
   }
   else if (unpooling_param.has_scale())
   {
-    CHECK_GT(scale_, 0);
     scale_ = unpooling_param.scale();
+    CHECK_GT(scale_, 0);
     output_h_ = bottom[DataBlobIndex]->height() * scale_;
     output_w_ = bottom[DataBlobIndex]->width() * scale_;
   }
