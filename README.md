@@ -6,7 +6,7 @@ FuseNet is developed as a general architecture for deep convolutional neural net
 * [Publication](#paper)
 * [License and Contact](#other)
 
-## <a, name="usage">Usage</a>
+## Usage
 ### Installation
 The code is compatible with an early Caffe version of June 2016. It is developed under Ubuntu 16.04 with CUDA 7.5 and cuDNN v5.0. If you use the program under other Ubuntu distributions, you may need to comment out line 72--73 in the root CMakeLists.txt file. If you compile under other OS, please use Google as your friend. We mostly test the program with Nvidia Titan X GPU. Please note multi-GPU training is supported.
 ```
