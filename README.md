@@ -1,5 +1,5 @@
 # FuseNet
-## [[PyTorch]](https://github.com/hazirbas/fusenet-pytorch)
+## [[PyTorch]](https://github.com/zanilzanzan/FuseNet_PyTorch)
 Please refer to PyTorch implementation for an up-to-date implementation.
 
 FuseNet is developed as a general architecture for deep convolutional neural network (CNN) to train dataset with RGB-D images. It can be used for semantic segmentation, scene classification and other applications. This repository is an official release of [this paper](#paper), and it is implemented based on the [BVLC/caffe](https://github.com/BVLC/caffe) framework.
