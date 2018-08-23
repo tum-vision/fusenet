@@ -77,10 +77,6 @@ More information about the dataset, check [here](http://rgbd.cs.princeton.edu/).
  - [x] [deploy.prototxt](fusenet/segmentation/sunrgbd-sf5/deploy.prototxt)
  - [ ] caffemodel
 
-
-### Scene Classification
-To be released.
-
 ## <c name="paper">Publication</c>
 If you use this code or our trainined model in your work, please consider cite the following paper.
 
