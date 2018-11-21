@@ -1,4 +1,5 @@
 # FuseNet
+## [[PyTorch-tba]](https://github.com/MehmetAygun/fusenet-pytorch)
 ## [[PyTorch]](https://github.com/zanilzanzan/FuseNet_PyTorch)
 Please refer to PyTorch implementation for an up-to-date implementation.
 
